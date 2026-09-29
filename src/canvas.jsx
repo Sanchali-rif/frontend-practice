@@ -1,8 +1,12 @@
-import React from 'react'
+import { useEffect } from 'react'
+import canvasimages from "./canvasimages"
 
 function Canvas() {
+  useEffect(()=>{
+    console.log(canvasimages)
+  })
   return (
-    <div>Canvas</div>
+    <canvas id="canvas"></canvas>
   )
 }
 
