@@ -2,7 +2,7 @@ import React from 'react'
 
 function Canvas() {
   return (
-    <div>canvas</div>
+    <div>Canvas</div>
   )
 }
 
