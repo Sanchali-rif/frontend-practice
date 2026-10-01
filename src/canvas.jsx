@@ -1,9 +1,24 @@
 import { useEffect,useRef,useState } from 'react'
 import canvasimages from "./canvasimages"
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 function Canvas() {
+  
   const canvasRef=useRef(null)
-  const [index,setIndex]=useState({value:2})
+  const [index,setIndex]=useState({value:0})
+
+  useGSAP(()=>{
+    gsap.to(index,{
+      value:149,
+      duration:3,
+      ease:"linear",
+      repeat:-1,
+      onUpdate:()=>{
+        setIndex({value:Math.round(index.value)})
+      }
+    })
+  })
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas && canvasimages.length > 0) {
