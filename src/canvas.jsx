@@ -3,14 +3,14 @@ import canvasimages from "./canvasimages"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-function Canvas() {
+function Canvas({startingIndex}) {
   
   const canvasRef=useRef(null)
-  const [index,setIndex]=useState({value:0})
+  const [index,setIndex]=useState({value:startingIndex})
 
   useGSAP(()=>{
     gsap.to(index,{
-      value:149,
+      value:startingIndex+149,
       duration:3,
       ease:"linear",
       repeat:-1,

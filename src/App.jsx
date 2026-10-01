@@ -5,7 +5,9 @@ function App(){
   return (
     <>
     <div className="w-full min-h-screen bg-black text-white">
-      <Canvas/>
+      <Canvas startingIndex={0}/>
+      <Canvas startingIndex={150}/>
+      <Canvas startingIndex={300}/>
     </div>
     </>
   )
