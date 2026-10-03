@@ -40,7 +40,7 @@ function Canvas({details}) {
 
 
   return (
-    <canvas id="canvas" ref={canvasRef} className='absolute' style={{width:`${size*1.2}px`,height:`${size*1.2}px`,top:`${top}%`,left:`${left}%`,zIndex:`${zIndex}`}}></canvas>
+    <canvas id="canvas" ref={canvasRef} className='absolute' style={{width:`${size*1.4}px`,height:`${size*1.4}px`,top:`${top}%`,left:`${left}%`,zIndex:`${zIndex}`}}></canvas>
   )
 }
 
