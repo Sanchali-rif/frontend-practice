@@ -5,13 +5,14 @@ import { useGSAP } from '@gsap/react'
 
 function Canvas({details}) {
   
+  const{startIndex,numImages,duration,size,top,left,zIndex}=details
   const canvasRef=useRef(null)
-  const [index,setIndex]=useState({value:details.startIndex})
+  const [index,setIndex]=useState({value:startIndex})
 
   useGSAP(()=>{
     gsap.to(index,{
-      value:details.startIndex+details.numImages-1,
-      duration:details.duration,
+      value:startIndex+numImages-1,
+      duration:duration,
       ease:"linear",
       repeat:-1,
       onUpdate:()=>{
@@ -33,7 +34,7 @@ function Canvas({details}) {
     }
   }, [index]);
   return (
-    <canvas id="canvas" ref={canvasRef} className='w-[18rem] h-[18rem]'></canvas>
+    <canvas id="canvas" ref={canvasRef} className={`w-[${size}px] h-[${size}px]`}></canvas>
   )
 }
 
