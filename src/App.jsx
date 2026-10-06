@@ -19,27 +19,22 @@ function App() {
         <Canvas details={canvadets}/>
       ))}
       {/** Basic Navbar with array links */}
-      {(() => {
-        const navLinks = [
-          { name: 'Home', href: '#' },
-          { name: 'About', href: '#about' },
-          { name: 'Projects', href: '#projects' },
-          { name: 'Contact', href: '#contact' }
-        ];
-        return (
-          <nav className="w-full bg-gray-900 px-8 py-4 flex items-center">
-            <div className="text-2xl font-bold mr-8">MySite</div>
-            <ul className="flex space-x-6">
-              {navLinks.map((link, i) => (
-                <li key={i}>
-                  <a href={link.href} className="hover:underline text-white">{link.name}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        );
-      })()}
- 
+      <div className="w-full h-screen text-white">
+        <nav className="fixed top-0 left-0 w-full p-8 flex justify-between z-50">
+          <div className="brand text-2xl font-regular">thirtysixstudios</div>
+          <div className="Links flex gap-10">
+            {["Home","About","Projects","Contact"].map((link,index)=>(
+              <a
+                kwy={index}
+                href={`#${link.toLowerCase()}`}
+                className="text-md hover:text-gray-300"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        </nav>
+        </div>
     </div>
     </>
   )
