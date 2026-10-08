@@ -35,11 +35,15 @@ function App() {
           </div>
         </nav>
         <div className="textcontainer w-full ps-[20%]">
-        <div className="text w-[50%]">
-          <h3 className="text-4xl leading-[1.5]">
-          At Thirtysixstudio, we build digital assets and immersive experiences for purposeful brands.
-          </h3>
-        </div>
+          <div className="text w-[50%]">
+            <h3 className="text-4xl leading-[1.5]">
+            At Thirtysixstudio, we build digital assets and immersive experiences for purposeful brands.
+            </h3>
+            <p className="text-lg w-[80%] mt-5 font-normal"> 
+            We're a boutique production studio focused on design, animation, and technology, constantly rethinking what digital craft can do for present-day ads and campaigns.
+            </p>
+            <p className="text-md mt-5">scroll</p>
+          </div>
         </div>
         </div>
     </div>
